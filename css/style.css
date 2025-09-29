@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --them-gray-900:#222328;
+    --them-border:#545454;
+    --them-white:#fff;
+    --them-red: #f75757;
+    --font-Poppins: "Poppins", sans-serif;
+    --title-color:#242424;
+    --text-color:#000000a6;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html,body{
+    font-family: "Hind", sans-serif;
 }
 
 .container{
@@ -35,16 +52,36 @@ img{
 .align-items-center{
     align-items: center;
 }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-8{
+    width: 66.64%;
+    padding: 0 15px;
+}
+.col-4{
+    width: 33.33%;
+    padding: 0 15px;
+}
+
+.p-3{
+    padding: 1.5rem;
+}
+.py-5{
+    padding: 5rem 0;
+}
+
 /* topbar start  */
 .topbar {
-    background: #222328;
+    background: var(--them-gray-900);
     color: #919194;
 }
 
 .topbar .icons{
     padding: 1rem 0;
     padding-right: 60px;
-    border-right: 1px solid #545454;
+    border-right: 1px solid var(--them-border);
 }
 
 .topbar .icons i{
@@ -55,10 +92,119 @@ img{
     margin-right: 2rem;
 }
 .topbar ul li  {
-    color: white;
+    color: var(--them-white);
 }
 .topbar ul li span{
     color: #919194;
     margin-right: 0.5rem;
 }
 /* topbar end  */
+
+/* header section start  */
+header{
+    color: var(--them-white);
+    background: var(--them-gray-900);
+    border-top: 1px solid var(--them-border);
+}
+header .logo{
+    font-size: 21px;
+    font-weight: 600;
+}
+header .logo span{
+    color: var(--them-red);
+}
+
+header ul li {
+    color: var(--them-white);
+    margin-left: 15px;
+    font-weight: 500;
+}
+header ul li a{
+    padding: 5px 8px;
+}
+
+header ul li:last-child a{
+    font-size: 14px;
+    font-weight: 400;
+    border: 2px solid var(--them-red);
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+/* header section end  */
+
+/* hero section start  */
+.hero{
+    height: 100vh;
+    background: url('https://themewagon.github.io/megakit-2/images/bg/home-1.jpg'),#00000099;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    position: relative;
+}
+.hero .hero-content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--them-white);
+}
+
+.hero .hero-content p{
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+.hero .hero-content h2{
+    font-size: 70px;
+    font-family: var(--font-Poppins);
+    line-height: 80px;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.hero .hero-content .hero-btn{
+    padding: 0.8rem 2rem;
+    background: var(--them-red);
+    border-radius: 2rem;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+/* hero section end  */
+
+/* info section start  */
+.info .info-content{
+    margin-bottom: 70px;
+}
+.info .info-content h5{
+    font-size: 16px;
+    font-family: var(--font-Poppins);
+    margin-bottom: 2rem;
+    color: var(--them-red);
+}
+.info .info-content h3{
+    font-size: 40px;
+    line-height: 50px;
+    font-family: var(--font-Poppins);
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.info .info-card i{
+    font-size: 60px;
+    color: var(--them-red);
+}
+
+.info .info-card h4{
+    color: var(--title-color);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 21px;
+}
+.info .info-card p{
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: 400;
+}
+/* info section end  */
